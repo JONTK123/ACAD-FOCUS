@@ -11,8 +11,7 @@
 /* Fundo-tela */
 
 html {
-    width: 100vw;
-    height: 100vh;
+
     font-size: 62.5%;
     color: white;
     font-family: 'Lato', sans-serif;
@@ -20,9 +19,8 @@ html {
 
 body {
     background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(/img/img5.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-position-y: 0px;
+    background-position: center top;
+    background-size: 100% auto; /* Estende a imagem na largura e altura automática */
     background-repeat: no-repeat;
 }
 
@@ -30,8 +28,9 @@ body {
 
 header {
     width: 100%;
-    height: 7vh;
+    height: 50px;
     background-color: rgba(22, 22, 22, 0.2);
+    position: static
 }
 
 .main-container {
@@ -179,10 +178,6 @@ main {
 
 /* Tabela */
 
-.aluno{
-
-}
-
 .tabela-de-treinos {
     width: 100%;
     overflow-x: auto; /* Adicionar barra de rolagem horizontal se necessário */
@@ -206,4 +201,13 @@ main {
 .tabela-treinos td {
     padding: 10px;
     border: 1px solid white;
+}
+
+.second-text {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: ;
+    font-size: 2rem;
+    color: rgb(165, 165, 165);
+    text-transform: uppercase;
 }
