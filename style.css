@@ -18,10 +18,9 @@ html {
 }
 
 body {
-    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(/img/img5.jpg);
+    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(img5.jpg);
     background-position: center top;
     background-size: 100% auto; /* Estende a imagem na largura e altura automática */
-    background-repeat: no-repeat;
 }
 
 /* Menu - Header - NavBar */
@@ -43,7 +42,6 @@ header {
     flex: 1; /* Adicionar elementos a essas divs/as faze-las crescer ira ser da mesma maneira e proporcional */
     margin: 10px; /* Margem, DISTANCIA ENTRE DIVS */
     padding: 10px; /* Espaçamento interno ELEMTNO COM DIV */
-    border: 1px solid white;
 }
 
 .info-aluno {
