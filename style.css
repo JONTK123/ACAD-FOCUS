@@ -1,211 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
-/* Zerando CSS */
+/* ORGANIZANDO O CSS */
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ao mudar algumas estruturas como, width or height, tudo eh somado. Para evitar, use o box-sizing */
 }
 
-/* Fundo-tela */
-
 html {
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(255, 255, 255);
+}
 
-    font-size: 62.5%;
-    color: white;
+h1 {
     font-family: 'Lato', sans-serif;
 }
 
-body {
-    background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(20, 20, 20, 1)), url(img5.jpg);
-    background-position: center top;
-    background-size: 100% auto; /* Estende a imagem na largura e altura automática */
-}
+body { 
+    /* background: linear-gradient((rgba(17,17,17,0.8))); INSERIR UM FUNDO; */
+    padding-top: 70px; /* Altura do seu cabeçalho (ajuste conforme necessário) */
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(255, 255, 255);
+} 
 
-/* Menu - Header - NavBar */
+.header {
+    position: fixed;
+    top: 0; /* Ao deixar position FIXED, eh necessario especificar aonde exatamente na tela ficara o nosso header.*/
+    left: 0; 
+    right: 0; 
 
-header {
-    width: 100%;
-    height: 50px;
-    background-color: rgba(22, 22, 22, 0.2);
-    position: static
-}
+    background-color: rgb(255, 0, 0); /* Cor de fundo do cabeçalho (pode ajustar a cor e a opacidade conforme necessário) */
+    z-index: 1000; /* Em que ordem o elemento deve ser empilhado sobre os outros */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
 
-.main-container {
+
     display: flex;
-    justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
-    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: row;
+    text-transform: uppercase;
+    height: 70px;
 }
 
-.info-aluno, .main-content {
-    flex: 1; /* Adicionar elementos a essas divs/as faze-las crescer ira ser da mesma maneira e proporcional */
-    margin: 10px; /* Margem, DISTANCIA ENTRE DIVS */
-    padding: 10px; /* Espaçamento interno ELEMTNO COM DIV */
-}
-
-.info-aluno {
-    font-size: 1.8rem;
-}
-
-.menu-content {
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.8rem;
-}
-
-.logo {
-    font-size: 1.8rem;
-    letter-spacing: 0.4rem;
-    cursor: pointer;
+.header a {
     text-decoration: none;
-    color: inherit;
+    color: rgb(255, 255, 255);
 }
 
-.menu-content .list-itens {
+.titulo {
+    letter-spacing: 0.4rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.linkss {
     display: flex;
     list-style: none;
-    gap: 10px;
-}
-
-.menu-content .list-itens a {
-    text-decoration: none;
-    color: white;
-    padding: 1.5rem;
-    transform: 2ms ease-in;
-    position: relative;
-}
-
-
-.menu-content .list-itens a:before {
-    content: ' ';
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 0px;
-    height: 1px;
-    background-color: rgb(251, 255, 0);
-    transition: all 1.5s ease; 
-}
-
-.menu-content .list-itens a:hover:before {
-    width: 100%;
-}
-
-/* Centro - Conteudo Principal */
-
-main {
-    height: 93vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Textos conteudo principal */
-
-.primary-text {
-    width: 850px;
-    font-size: 5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    text-underline-offset: 5px; /* Ajuste a posição vertical do sublinhado */
-    text-decoration-thickness: 2px; /* Ajuste a espessura do sublinhado */
-}
-
-.second-text {
-    margin-bottom: 3%;
-    font-size: 2rem;
-    color: rgb(165, 165, 165);
-    text-transform: uppercase;
-}
-
-/* Botões */
-
-
-.btns {
-    display: flex;
-    justify-content: center;
     gap: 20px;
-}
-
-.btns button {
-    width: 250px;
-    height: 60px;
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-    text-transform: uppercase;
-    background-color: transparent;
     font-weight: bold;
-    letter-spacing: 0.2rem;
-    border-radius: 20px;
-    position: relative;
-    transition: 1.5s;
 }
 
-.btns button:hover {
-    color: rgb(251, 255, 0);
-    border: none;
-}
-
-.btns button:before {
-    content: ' ';
-    border-radius: 20px;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    width: 0;
-    height: 60px;
-    background-color: rgb(61, 61, 61);
-    z-index: -1;
-    transition: 1s;
-}
-
-.btns button:hover:before {
-    width: 100%;
-}
-
-/* Tabela */
-
-.tabela-de-treinos {
-    width: 100%;
-    overflow-x: auto; /* Adicionar barra de rolagem horizontal se necessário */
-    text-align: center;
-}
-
-.tabela-treinos {
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    border: 1px solid white;
-}
-
-.tabela-treinos th {
-    border: 1px solid white;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-}
-
-.tabela-treinos td {
-    padding: 10px;
-    border: 1px solid white;
-}
-
-.second-text {
-    text-align: center;
-    margin-bottom: 3%;
-    margin-top: ;
-    font-size: 2rem;
-    color: rgb(165, 165, 165);
-    text-transform: uppercase;
-}
