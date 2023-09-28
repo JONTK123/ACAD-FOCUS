@@ -64,7 +64,7 @@ body {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1218px) {
     .linkss {
         display: flex;
         justify-content: center; /* Centralize os elementos da lista horizontalmente */
@@ -92,17 +92,14 @@ body {
         display: block;
         text-align: center; /* Alinhe o texto ao centro */
         letter-spacing: 0.2rem;
-
     }
 
     .header {
         display: block;
         height: 155px;
-
     }
 
     body { 
-        /* background: linear-gradient((rgba(17,17,17,0.8))); INSERIR UM FUNDO; */
         padding-top: 155px; /* Altura do seu cabeçalho (ajuste conforme necessário) */
     } 
 }
