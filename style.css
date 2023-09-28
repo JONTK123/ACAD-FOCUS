@@ -36,7 +36,6 @@ body {
     z-index: 1000; /* Em que ordem o elemento deve ser empilhado sobre os outros */
     align-items: center; /* Centraliza verticalmente o conteúdo */
 
-
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -65,3 +64,45 @@ body {
     font-weight: bold;
 }
 
+@media screen and (max-width: 1024px) {
+    .linkss {
+        display: flex;
+        justify-content: center; /* Centralize os elementos da lista horizontalmente */
+        text-align: center; /* Alinhe o texto ao centro */
+        flex-wrap: wrap; /* Quebre em várias linhas se necessário */
+    }
+
+    .header {
+        display: block;
+
+    }
+
+    .titulo {
+        text-align: center; /* Alinhe o texto ao centro */
+    }
+
+    .header a {
+        display: inline-block; /* Coloque os ícones na mesma linha */
+        text-align: left; /* Alinhe os ícones à esquerda */
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .linkss {
+        display: block;
+        text-align: center; /* Alinhe o texto ao centro */
+        letter-spacing: 0.2rem;
+
+    }
+
+    .header {
+        display: block;
+        height: 155px;
+
+    }
+
+    body { 
+        /* background: linear-gradient((rgba(17,17,17,0.8))); INSERIR UM FUNDO; */
+        padding-top: 155px; /* Altura do seu cabeçalho (ajuste conforme necessário) */
+    } 
+}
