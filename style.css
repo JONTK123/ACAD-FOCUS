@@ -20,21 +20,27 @@ h1 {
 
 body { 
     /* background: linear-gradient((rgba(17,17,17,0.8))); INSERIR UM FUNDO; */
-    padding-top: 70px; /* Altura do seu cabeçalho (ajuste conforme necessário) */
+    padding-top: 70px;
     margin: 0;
     font-family: 'Lato', sans-serif;
     background-color: rgb(255, 255, 255);
 } 
 
+header{
+    width: 100%;
+}
+
+/* HEADER */
+
 .header {
-    position: fixed;
+    position: absolute;
     top: 0; /* Ao deixar position FIXED, eh necessario especificar aonde exatamente na tela ficara o nosso header.*/
     left: 0; 
     right: 0; 
-
-    background-color: rgb(255, 0, 0); /* Cor de fundo do cabeçalho (pode ajustar a cor e a opacidade conforme necessário) */
+    width: 100%;
+    background-color: rgb(255, 0, 0); 
     z-index: 1000; /* Em que ordem o elemento deve ser empilhado sobre os outros */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; 
 
     display: flex;
     justify-content: space-between;
@@ -64,42 +70,116 @@ body {
     font-weight: bold;
 }
 
+.icones {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-weight: bold;
+}
+
+/* VIDEO E MAPA */
+
+.video{
+    width: 40%;
+
+}
+
+.gmap{
+    width: 40%;
+    height: 500px;
+
+}
+
+.div-video{
+    justify-content: center; 
+    text-align: center; 
+}
+
+.mapa{
+    justify-content: center; 
+    text-align: center; 
+}
+
+/* RESPONSIVIDADE */
+
 @media screen and (max-width: 1218px) {
+    body { 
+        padding-top: 110px; 
+    } 
     .linkss {
         display: flex;
-        justify-content: center; /* Centralize os elementos da lista horizontalmente */
-        text-align: center; /* Alinhe o texto ao centro */
-        flex-wrap: wrap; /* Quebre em várias linhas se necessário */
+        justify-content: center; 
+        text-align: center; 
+        flex-wrap: wrap; 
     }
 
     .header {
         display: block;
-
+        height: 110px;
     }
 
     .titulo {
-        text-align: center; /* Alinhe o texto ao centro */
+        text-align: center; 
     }
 
     .header a {
-        display: inline-block; /* Coloque os ícones na mesma linha */
-        text-align: left; /* Alinhe os ícones à esquerda */
+        display: inline-block; 
+        text-align: left;
+    }
+
+    .video{
+        width: 60%;
+
+    }
+
+    .gmap{
+        width: 50%;
+        height: 300px;
+
+    }
+    
+    .icones {
+        display: flex;
+        font-weight: bold;
+        justify-content: center; 
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 425px) {
+    body { 
+        padding-top: 175px; 
+    } 
     .linkss {
         display: block;
-        text-align: center; /* Alinhe o texto ao centro */
+        text-align: center;
         letter-spacing: 0.2rem;
     }
 
     .header {
         display: block;
-        height: 155px;
+        height: 175px;
     }
 
-    body { 
-        padding-top: 155px; /* Altura do seu cabeçalho (ajuste conforme necessário) */
-    } 
+    .video{
+        width: 100%;
+    }
+
+    .gmap{
+        width: 100%;
+        height: 300px;
+    }
+
+    .icones {
+        display: flex;
+        font-weight: bold;
+        justify-content: center; 
+
+    }
 }
+
+@media screen and (min-width: 425px) {
+    .header{
+        position: fixed;
+    }
+}
+

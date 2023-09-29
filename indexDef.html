@@ -12,9 +12,6 @@
     <header>
         <div class="header">
             <h1 class="titulo"><a href="indexDef.html">AcademiaFocusFitness</a>
-            <a href="#"><i class="fa-brands fa-whatsapp" style="color: #000000;"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f" style="color: #000000;"></i></a>
             </h1>
             <nav class="links">
                 <ul class="linkss">
@@ -24,6 +21,11 @@
                     <li><a href="#">Horarios</a></li>
                     <li><a href="#">Planos</a></li>
                     <li><a href="#">Contato</a></li>
+                    <li><ul class="icones">
+                        <li><a href="#"><i class="fa-brands fa-whatsapp" style="color: #000000;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f" style="color: #000000;"></i></a></li>
+                    </ul></li>
                 </ul>
             </nav>
         </div>
@@ -44,11 +46,14 @@
 
     <hr>
     <!-- VIDEO -->
-    <video width="640" height="360" controls>
-        <p>Video sobre a nossa academia: </p>
-        <source src="caminho_do_seu_video.mp4" type="video/mp4">
-        Seu navegador não suporta o elemento de vídeo.
-    </video>
+    <div class="div-video">
+        <video class="video" controls>
+            <p>Video sobre a nossa academia: </p>
+            <source src="caminho_do_seu_video.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+
 
     <hr>
     <!-- FOTOS EM LISTAS -->
@@ -210,7 +215,7 @@
         <!-- Mapa da Primeira Academia -->
         <div class="mapa">
             <!-- Substitua a URL do iframe abaixo com o código do seu mapa do Google Maps para a primeira academia -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2dLongitude1!3dLatitude1!4m22!2m11!1smarker1!2smarker2!3smarker3!4smarker4!3m2!1sPT-BR!2sBR!4v1234567890!5m2!1sPT-BR!2sBR!6surl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2dLongitude1!3dLatitude1!4m22!2m11!1smarker1!2smarker2!3smarker3!4smarker4!3m2!1sPT-BR!2sBR!4v1234567890!5m2!1sPT-BR!2sBR!6surl" class="gmap" style="border:0;" allowfullscreen="" loading="lazy"class></iframe>
         </div>
         
         <!-- Informações de Contato da Primeira Academia -->
@@ -231,7 +236,7 @@
         <!-- Mapa da Segunda Academia -->
         <div class="mapa">
             <!-- Substitua a URL do iframe abaixo com o código do seu mapa do Google Maps para a segunda academia -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2dLongitude2!3dLatitude2!4m22!2m11!1smarker1!2smarker2!3smarker3!4smarker4!3m2!1sPT-BR!2sBR!4v1234567890!5m2!1sPT-BR!2sBR!6surl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2dLongitude2!3dLatitude2!4m22!2m11!1smarker1!2smarker2!3smarker3!4smarker4!3m2!1sPT-BR!2sBR!4v1234567890!5m2!1sPT-BR!2sBR!6surl" class="gmap" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         
         <!-- Informações de Contato da Segunda Academia -->
