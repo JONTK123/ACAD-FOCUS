@@ -97,11 +97,11 @@ header{
 }
 
 .intro-site h1{
-    font-size: 50px;
+    font-size: 90px;
 }
 
 .intro-site h3{
-    font-size: 30px;
+    font-size: 50px;
 }
 
 /* FOTOS */
@@ -112,9 +112,41 @@ header{
 }
 
 .fotos h1{
-    font-size: 30px;
+    padding-top: 1%;
+    font-size: 60px;
 
 }
+
+.p-uni{
+    text-decoration: underline;
+    text-underline-offset: 4px; /* Ajuste o valor conforme desejado */
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.fotosuni2-list {
+    list-style: none;
+    display: flex; /* Use flexbox para alinhar as imagens na horizontal */
+    justify-content: center; /* Centralize as imagens horizontalmente */
+    align-items: center; /* Centralize as imagens verticalmente */
+    height: 800px; /* Altura desejada para a linha de imagens */
+}
+
+/* Estilize as imagens */
+.fotosuni2-list li {
+    margin-right: 75px; /* Adicione um pequeno espaço horizontal entre as imagens */
+}
+
+.fotosuni2 {
+    max-width: 500px; /* Largura máxima desejada para as imagens (ajuste conforme necessário) */
+}
+
+
+
+
+
+
+
 
 
 
@@ -217,6 +249,7 @@ header{
     .intro-site h3{
         font-size: 230%;
     }
+
 }
 
 @media screen and (max-width: 426px) {
@@ -273,6 +306,14 @@ header{
     
     .intro-site h3{
         font-size: 170%;
+    }
+
+    
+    .fotosuni2-list{
+        margin-right: 15px; /* Adicione um pequeno espaço horizontal entre as imagens */
+        justify-content: space-between; /* Alinha as imagens horizontalmente com espaço igual entre elas */
+        display: flex;
+        flex-direction: column;
     }
 }
 
