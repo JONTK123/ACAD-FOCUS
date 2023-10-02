@@ -106,61 +106,62 @@ header{
 
 /* FOTOS */
 
-.fotos{
-    justify-content: center; 
+.terciary-text {
     text-align: center;
+    padding-top: 10px;
+    font-size: 2.5rem;
 }
 
-.fotos h1{
-    padding-top: 1%;
-    font-size: 60px;
-
-}
-
-.p-uni{
+.p-uni1 {
     text-decoration: underline;
     text-underline-offset: 4px; /* Ajuste o valor conforme desejado */
     font-size: 30px;
     padding-top: 20px;
 }
 
-.fotosuni2-list {
-    list-style: none;
-    display: flex; /* Use flexbox para alinhar as imagens na horizontal */
-    justify-content: center; /* Centralize as imagens horizontalmente */
-    align-items: center; /* Centralize as imagens verticalmente */
-    height: 800px; /* Altura desejada para a linha de imagens */
+.p-uni2 {
+    text-decoration: underline;
+    text-underline-offset: 4px; /* Ajuste o valor conforme desejado */
+    font-size: 30px;
+    padding-top: 20px;
 }
 
-/* Estilize as imagens */
-.fotosuni2-list li {
-    margin-right: 75px; /* Adicione um pequeno espaço horizontal entre as imagens */
+.fotosuni1-list {
+    padding-top: 20px;
+
+}
+
+.fotosuni1-list li {
+    padding-top: 20px;
+
+}
+
+.fotosuni2-list {
+    padding-top: 20px;
+
+}
+.fotosuni2-list li{
+    padding-top: 20px;
+
+}
+
+.unidade1 {
+    justify-content: center; 
+    text-align: center;
+}
+
+.unidade2 {
+    justify-content: center; 
+    text-align: center;
 }
 
 .fotosuni2 {
-    max-width: 500px; /* Largura máxima desejada para as imagens (ajuste conforme necessário) */
+    max-width: 400px; /* Decrease the maximum width to your desired size */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.fotosuni1 {
+    max-width: 400px; /* Decrease the maximum width to your desired size */
+}
 
 /* VIDEO E MAPA */
 
@@ -189,6 +190,36 @@ header{
     justify-content: center; 
     text-align: center; 
 }
+
+/* HORARIOS DE AULAS */
+
+.texto-horarios{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+
+.horarios-aulas {
+    display: flex;
+    justify-content: center; /* Center items horizontally on the screen */
+    align-items: center; /* Center items vertically on the screen */
+    flex-wrap: wrap; /* This allows items to wrap onto a new line if needed */
+    gap: 20px; /* Add spacing between each class schedule block */
+    text-align: center;
+}
+
+/* Remove the max-width for the images to allow them to size naturally */
+.musc1, .musc2, .aulas, .pilates, .ritmos, .crosstraining, .muay-thai, .hiit, .gap {
+    max-width: 300px;
+    padding-top: 10px;
+}
+
+
+
+
+
+
 
 /* RESPONSIVIDADE */
 
@@ -301,19 +332,15 @@ header{
     }
 
     .intro-site h1{
-        font-size: 200%;
+        font-size: 300%;
     }
     
     .intro-site h3{
         font-size: 170%;
     }
 
-    
-    .fotosuni2-list{
-        margin-right: 15px; /* Adicione um pequeno espaço horizontal entre as imagens */
-        justify-content: space-between; /* Alinha as imagens horizontalmente com espaço igual entre elas */
-        display: flex;
-        flex-direction: column;
+    .terciary-text {
+        font-size: 2.0rem;
     }
 }
 
