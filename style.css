@@ -35,7 +35,7 @@ p {
 }
 
 img {
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 /* HEADER */
@@ -316,6 +316,11 @@ img {
     text-align: center; /* Centraliza o texto nas células */
     border: 1px solid #ddd; /* Linha inferior para separar as células */
     font-size: 1.5rem;
+}
+
+.gympass {
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 /* CONTATO */
