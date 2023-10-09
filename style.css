@@ -34,6 +34,10 @@ p {
     font-size: larger;
 }
 
+img {
+    border-radius: 8px;
+}
+
 /* HEADER */
 
 .header {
@@ -167,16 +171,78 @@ p {
     max-width: 400px; /* Decrease the maximum width to your desired size */
 }
 
+/* INSTRUTORES */
+
+.equipe-instrutores {
+    justify-content: center; 
+    text-align: center;
+}
+
+.instrutor {
+    justify-content: center; 
+    text-align: center;
+    display: flex;
+}
+
+.foto-instrutor {
+    max-width: 250px; /* Decrease the maximum width to your desired size */
+    padding-right: 10px;
+}
+
+.info-instrutor {
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* VIDEO E MAPA */
 
 .video{
     width: 40%;
     padding-top: 20px;
+    border-radius: 8px; /* Adicione um valor de raio desejado para arredondar as bordas */
+
 }
 
 .gmap{
     width: 40%;
     height: 500px;
+    border-radius: 8px; /* Adicione um valor de raio desejado para arredondar as bordas */
 
 }
 
