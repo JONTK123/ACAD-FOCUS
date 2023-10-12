@@ -36,7 +36,7 @@ p {
 
 img {
     border-radius: 15px;
-}
+}  
 
 /* HEADER */
 
@@ -58,6 +58,7 @@ img {
     flex-direction: row;
     text-transform: uppercase;
     height: 50px;
+    border-bottom: 1px solid white;
 }
 
 .header a {
@@ -135,22 +136,21 @@ img {
 }
 
 .fotosuni1-list {
+    display: flex; /* Aplica o flex para alinhar as imagens em uma linha horizontal */
+    justify-content: space-between; /* Distribui o espaço entre as imagens */
+    gap: 10px; /* Adiciona espaçamento entre as imagens */
     padding-top: 20px;
-
 }
 
 .fotosuni1-list li {
-    padding-top: 20px;
-
+    flex: 1; /* Torna as imagens flexíveis, para que ocupem espaços iguais */
+    max-width: 100%; /* Garante que as imagens não ultrapassem o contêiner */
 }
 
-.fotosuni2-list {
-    padding-top: 20px;
-
-}
-.fotosuni2-list li{
-    padding-top: 20px;
-
+.fotosuni1-list img {
+    width: 100%; /* Faz com que as imagens preencham seus contêineres */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Adiciona borda arredondada às imagens */
 }
 
 .unidade1 {
@@ -170,6 +170,11 @@ img {
 .fotosuni1 {
     max-width: 400px; /* Decrease the maximum width to your desired size */
 }
+
+.container-fotos {
+}    
+
+
 
 /* INSTRUTORES */
 
@@ -196,39 +201,6 @@ img {
     justify-content: center; /* Centraliza verticalmente */
     align-items: center; /* Centraliza horizontalmente */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* VIDEO E MAPA */
 
@@ -353,6 +325,11 @@ img {
     padding-bottom: 40px;
  }
 
+.ntelefone {
+    font-size: x-large;
+
+}
+
 /* RESPONSIVIDADE */
 
 @media screen and (max-width: 1218px) {
@@ -416,7 +393,7 @@ img {
 
 @media screen and (max-width: 426px) {
     body { 
-        padding-top: 163px; 
+        padding-top: 175px; 
     } 
 
     .titulo {
@@ -437,7 +414,7 @@ img {
     
     .header {
         display: block;
-        height: 163px;
+        height: 175px;
     }
 
     .video{
@@ -482,6 +459,15 @@ img {
     .tabela-planos th, .tabela-planos td {
         padding: 5px; /* Reduza o espaço entre as células */
     }
+
+    .fotosuni1-list {
+        display: flex; /* Aplica o flex para alinhar as imagens em uma linha horizontal */
+        flex-direction: column;
+        justify-content: space-between; /* Distribui o espaço entre as imagens */
+        gap: 10px; /* Adiciona espaçamento entre as imagens */
+        padding-top: 20px;
+    }
+    
 }
 
 @media screen and (min-width: 426px) {
