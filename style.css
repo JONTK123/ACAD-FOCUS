@@ -171,11 +171,6 @@ img {
     max-width: 400px; /* Decrease the maximum width to your desired size */
 }
 
-.container-fotos {
-}    
-
-
-
 /* INSTRUTORES */
 
 .equipe-instrutores {
@@ -327,8 +322,13 @@ img {
 
 .ntelefone {
     font-size: x-large;
-
 }
+
+.telefone-whatsapp:hover {
+    color: #00CC00; /* Altere a cor para a que desejar */
+    text-decoration: underline;
+}
+
 
 /* RESPONSIVIDADE */
 
