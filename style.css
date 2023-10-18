@@ -36,7 +36,10 @@ p {
 
 img {
     border-radius: 15px;
-}  
+} 
+
+
+
 
 /* HEADER */
 
@@ -308,7 +311,6 @@ img {
 
 .ntelefone a {
     text-decoration: none;
-    color: red;
 }
 
 .listinha1 {
@@ -323,12 +325,6 @@ img {
 .ntelefone {
     font-size: x-large;
 }
-
-.telefone-whatsapp:hover {
-    color: #00CC00; /* Altere a cor para a que desejar */
-    text-decoration: underline;
-}
-
 
 /* RESPONSIVIDADE */
 
