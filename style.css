@@ -139,11 +139,13 @@ img {
 }
 
 .fotosuni1-list {
+    list-style: none; /* Remove the bullet points */
     display: flex; /* Aplica o flex para alinhar as imagens em uma linha horizontal */
-    justify-content: space-between; /* Distribui o espaço entre as imagens */
-    gap: 10px; /* Adiciona espaçamento entre as imagens */
+    justify-content: space-between; /* Distribui o espaço entre as images */
+    gap: 10px; /* Adiciona espaçamento entre as images */
     padding-top: 20px;
 }
+
 
 .fotosuni1-list li {
     flex: 1; /* Torna as imagens flexíveis, para que ocupem espaços iguais */
@@ -324,6 +326,15 @@ img {
 
 .ntelefone {
     font-size: x-large;
+}
+
+.telefone-whatsapp a {
+    color: rgb(128, 0, 0);
+    font-size: xx-large;
+}
+
+.telefone-whatsapp a:hover {
+    color: green;
 }
 
 /* RESPONSIVIDADE */
