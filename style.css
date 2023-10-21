@@ -38,9 +38,6 @@ img {
     border-radius: 15px;
 } 
 
-
-
-
 /* HEADER */
 
 .header {
@@ -174,6 +171,22 @@ img {
 
 .fotosuni1 {
     max-width: 400px; /* Decrease the maximum width to your desired size */
+}
+
+.fotosuni5 {
+    padding-top: 125px;
+    padding-bottom: 125px;
+    padding-left: 30px;
+}
+
+.fotosuni6 {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 30px;
+}
+
+.fotosuni5, .fotosuni6 {
+    border-radius: 15px;
 }
 
 /* INSTRUTORES */
@@ -335,6 +348,11 @@ img {
 
 .telefone-whatsapp a:hover {
     color: green;
+}
+
+.pzinho {
+    justify-content: center;
+    align-items: center;
 }
 
 /* RESPONSIVIDADE */
