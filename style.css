@@ -419,47 +419,49 @@ img {
 
 @media screen and (max-width: 653px) {
     body { 
-        padding-top: 175px; 
+        padding-top: 117px; 
     } 
-
-    .titulo {
-        font-size: 1.2rem;
-        padding-bottom: 5px;
-    }
-
     .linkss {
-        display: block;
-        text-align: center;
-        letter-spacing: 0.2rem;
-        font-size: 0.7rem;
+        display: flex;
+        justify-content: center; 
+        text-align: center; 
+        flex-wrap: wrap; 
     }
 
-    .linkss a {
-        padding: 2.5px;
-    }
-    
     .header {
         display: block;
-        height: 175px;
+        height: 117px;
+    }
+
+    .titulo {
+        text-align: center; 
+        width: 100%;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+
+    .header a {
+        display: inline-block; 
+        text-align: left;
     }
 
     .video{
-        width: 100%;
+        width: 60%;
     }
 
     .gmap{
-        width: 100%;
+        width: 50%;
+        height: 300px;
     }
-
+    
     .icones {
         display: flex;
         font-weight: bold;
         justify-content: center; 
-
     }
 
     .logoFOCUS {
-        width: 75%;
+        width: 50%;
         margin: 0;
         justify-content: center;
     }
@@ -469,17 +471,7 @@ img {
     }
     
     .intro-site h3{
-        font-size: 170%;
-    }
-
-    .terciary-text {
-        font-size: 2.0rem;
-    }
-
-    .tabela-planos {
-        font-size: 1rem; /* Reduza o tamanho da fonte para caber em telas menores */
-        margin: 0 auto; /* Centralize a tabela horizontalmente */
-
+        font-size: 230%;
     }
 
     .tabela-planos th, .tabela-planos td {
@@ -494,10 +486,8 @@ img {
         padding-top: 20px;
     }
     
+
 }
-
-
-
 
 @media screen and (max-width: 426px) {
     body { 
