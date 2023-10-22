@@ -414,7 +414,90 @@ img {
         font-size: 230%;
     }
 
+} 
+
+
+@media screen and (max-width: 653px) {
+    body { 
+        padding-top: 175px; 
+    } 
+
+    .titulo {
+        font-size: 1.2rem;
+        padding-bottom: 5px;
+    }
+
+    .linkss {
+        display: block;
+        text-align: center;
+        letter-spacing: 0.2rem;
+        font-size: 0.7rem;
+    }
+
+    .linkss a {
+        padding: 2.5px;
+    }
+    
+    .header {
+        display: block;
+        height: 175px;
+    }
+
+    .video{
+        width: 100%;
+    }
+
+    .gmap{
+        width: 100%;
+    }
+
+    .icones {
+        display: flex;
+        font-weight: bold;
+        justify-content: center; 
+
+    }
+
+    .logoFOCUS {
+        width: 75%;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .intro-site h1{
+        font-size: 300%;
+    }
+    
+    .intro-site h3{
+        font-size: 170%;
+    }
+
+    .terciary-text {
+        font-size: 2.0rem;
+    }
+
+    .tabela-planos {
+        font-size: 1rem; /* Reduza o tamanho da fonte para caber em telas menores */
+        margin: 0 auto; /* Centralize a tabela horizontalmente */
+
+    }
+
+    .tabela-planos th, .tabela-planos td {
+        padding: 5px; /* Reduza o espaço entre as células */
+    }
+
+    .fotosuni1-list {
+        display: flex; /* Aplica o flex para alinhar as imagens em uma linha horizontal */
+        flex-direction: column;
+        justify-content: space-between; /* Distribui o espaço entre as imagens */
+        gap: 10px; /* Adiciona espaçamento entre as imagens */
+        padding-top: 20px;
+    }
+    
 }
+
+
+
 
 @media screen and (max-width: 426px) {
     body { 
