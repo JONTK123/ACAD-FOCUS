@@ -78,6 +78,7 @@ img {
     list-style: none;
     gap: 20px;
     font-weight: bold;
+    font-size: larger;
 }
 
 .icones {
@@ -432,9 +433,9 @@ img {
 
 } 
 
-@media screen and (max-width: 653px) {
+@media screen and (max-width: 800px) {
     body { 
-        padding-top: 195px; 
+        padding-top: 240px; 
     } 
 
     .titulo {
@@ -447,6 +448,7 @@ img {
         text-align: center;
         letter-spacing: 0.2rem;
         font-size: 0.7rem;
+        font-size: larger;
     }
 
     .linkss a {
@@ -454,7 +456,7 @@ img {
     }
     
     .header {
-        height: 195px;
+        height: 240px;
     }
 
     .video{
@@ -510,7 +512,7 @@ img {
     
 }
 
-@media screen and (min-width: 653px) {
+@media screen and (min-width: 800px) {
     .header{
         position: fixed;
     }
