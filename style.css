@@ -354,9 +354,20 @@ img {
     color: green;
 }
 
-.pzinho {
-    justify-content: center;
-    align-items: center;
+.copyright {
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.copyright a {
+    font-size: x-large;
+    color: white;
+    text-decoration-line: none;
+}
+
+.copyright a:hover {
+    color:blueviolet
 }
 
 /* RESPONSIVIDADE */
@@ -423,11 +434,11 @@ img {
 
 @media screen and (max-width: 653px) {
     body { 
-        padding-top: 175px; 
+        padding-top: 190px; 
     } 
 
     .titulo {
-        font-size: 1.2rem;
+        font-size: 2.3rem;
         padding-bottom: 5px;
     }
 
@@ -443,7 +454,7 @@ img {
     }
     
     .header {
-        height: 175px;
+        height: 190px;
     }
 
     .video{
