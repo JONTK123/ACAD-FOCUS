@@ -443,7 +443,6 @@ img {
     }
     
     .header {
-        display: block;
         height: 175px;
     }
 
@@ -500,7 +499,7 @@ img {
     
 }
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 653px) {
     .header{
         position: fixed;
     }
