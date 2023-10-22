@@ -177,12 +177,16 @@ img {
     padding-top: 125px;
     padding-bottom: 125px;
     padding-left: 30px;
+    padding-right: 30px;
+
 }
 
 .fotosuni6 {
     padding-top: 75px;
     padding-bottom: 75px;
     padding-left: 30px;
+    padding-right: 30px;
+
 }
 
 .fotosuni5, .fotosuni6 {
@@ -361,6 +365,7 @@ img {
     body { 
         padding-top: 80px; 
     } 
+
     .linkss {
         display: flex;
         justify-content: center; 
@@ -421,6 +426,11 @@ img {
     body { 
         padding-top: 117px; 
     } 
+
+    .titulo{
+        padd
+    }
+
     .linkss {
         display: flex;
         justify-content: center; 
