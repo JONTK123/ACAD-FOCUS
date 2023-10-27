@@ -10,12 +10,14 @@
 }
 
 html {
-    font-family: 'Lato', sans-serif;
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    scroll-behavior: smooth; /* Ativar o comportamento de rolagem suave */
+
 }
 
 h1 {
-    font-family: 'Lato', sans-serif;
     color: white;
 }
 
@@ -23,7 +25,6 @@ body {
     background-color: #30302E;
     padding-top: 50px;
     margin: 0;
-    font-family: 'Lato', sans-serif;
 } 
 
 header{
@@ -38,7 +39,20 @@ img {
     border-radius: 15px !important;
 }
 
+/* SCRIPT */
 
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out; /* Adiciona uma animação de fade-in */
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 /* HEADER */
 
 .header {
@@ -60,6 +74,43 @@ img {
     text-transform: uppercase;
     height: 50px;
     border-bottom: 1px solid white;
+}
+
+.header .linkss a {
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.header .linkss a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    padding-top: 1px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.header .icones a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    padding-top: 1px;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.3s ease;
+}
+
+.header .linkss a:hover::before {
+    width: 100%;
+}
+
+.header .icones a:hover::before {
+    width: 100%;
 }
 
 .header a {
@@ -87,6 +138,19 @@ img {
     list-style: none;
     gap: 20px;
     font-weight: bold;
+}
+
+.titulo {
+    padding-left: 30px;
+    letter-spacing: 0.4rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.3s ease; /* Adicione a transição no transform */
+}
+
+.titulo:hover {
+    transform: scale(1.1); /* Quando o mouse passar sobre o título, ele aumentará 10% de tamanho */
 }
 
 /* DESCRIÇÃO */
@@ -129,35 +193,37 @@ img {
 
 .p-uni1 {
     text-decoration: underline;
-    text-underline-offset: 4px; /* Ajuste o valor conforme desejado */
+    text-underline-offset: 4px; 
     font-size: 30px;
     padding-top: 20px;
 }
 
 .p-uni2 {
     text-decoration: underline;
-    text-underline-offset: 4px; /* Ajuste o valor conforme desejado */
+    text-underline-offset: 4px; 
     font-size: 30px;
     padding-top: 20px;
 }
 
 .fotosuni1-list {
-    list-style: none; /* Remove the bullet points */
-    display: flex; /* Aplica o flex para alinhar as imagens em uma linha horizontal */
-    justify-content: space-between; /* Distribui o espaço entre as images */
-    gap: 10px; /* Adiciona espaçamento entre as images */
+    list-style: none; 
+    display: flex; 
+    justify-content: space-between;
+    gap: 10px; 
     padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
 .fotosuni1-list li {
-    flex: 1; /* Torna as imagens flexíveis, para que ocupem espaços iguais */
-    max-width: 100%; /* Garante que as imagens não ultrapassem o contêiner */
+    flex: 1;
+    max-width: 100%;
 }
 
 .fotosuni1-list img {
-    width: 100%; /* Faz com que as imagens preencham seus contêineres */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%; 
+    height: auto; 
 }
 
 .unidade1 {
@@ -171,11 +237,11 @@ img {
 }
 
 .fotosuni2 {
-    max-width: 400px; /* Decrease the maximum width to your desired size */
+    max-width: 400px; 
 }
 
 .fotosuni1 {
-    max-width: 400px; /* Decrease the maximum width to your desired size */
+    max-width: 400px; 
 }
 
 /* INSTRUTORES */
@@ -257,6 +323,7 @@ img {
     max-width: 300px;
     padding-top: 10px;
     border-radius: 15px !important;
+    max-height: 250px;
 
 }
 
@@ -269,6 +336,8 @@ img {
 .tabela{
     text-align: center;
     padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .tabela-planos{
@@ -299,6 +368,31 @@ img {
 }
 
 /* CONTATO */
+
+.academia-info p a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.academia-info p a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    padding-top: 1px;
+    background-color: rgb(4, 237, 0);
+    transition: width 0.3s ease;
+}
+
+.academia-info .horaacad {
+    padding-top: 10px;
+}
+
+.academia-info p a:hover::before {
+    width: 100%;
+}
 
 .h3zinho {
     font-size: 170%;
@@ -332,12 +426,12 @@ img {
 }
 
 .telefone-whatsapp a {
-    color: rgb(128, 0, 0);
+    color: rgb(255, 0, 0);
     font-size: xx-large;
 }
 
 .telefone-whatsapp a:hover {
-    color: green;
+    color: rgb(18, 222, 18);
 }
 
 .copyright {
@@ -355,6 +449,7 @@ img {
 .copyright a:hover {
     color:blueviolet
 }
+
 
 /* RESPONSIVIDADE */
 
@@ -494,7 +589,7 @@ img {
         gap: 10px; /* Adiciona espaçamento entre as imagens */
         padding-top: 20px;
     }
-    
+
 }
 
 @media screen and (min-width: 800px) {
