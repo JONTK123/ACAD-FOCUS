@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
 /* ORGANIZANDO O CSS */
 
@@ -41,6 +40,10 @@ img {
 
 /* HEADER */
 
+
+/* A propriedade display em CSS determina como um elemento HTML é exibido na página.   e position ehn como ele sera posicionado dentro dessa pagina? */
+
+
 .header {
     position: absolute;
     top: 0; /* Ao deixar position FIXED, eh necessario especificar aonde exatamente na tela ficara o nosso header.*/
@@ -63,25 +66,25 @@ img {
 }
 
 .header .linkss a {
-    position: relative;
+    position: relative; /* Para poder mduar sua posicao ou que algo se sobreponha a ela. */
     padding-bottom: 3px;
 }
 
-.header .linkss a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
+.header .linkss a::before { /* Estamos criando um elemento que fica antes dos <a>. */
+    content: ''; /* Precisa por isso ao usar um before ou after. */
+    position: absolute; /* Deixa a posicao fixa, EM CIMA da relativa. */
+    bottom: 0; /* Definindo a posicao deste objeto em relacao ao <a> existente. */
     left: 0;
     width: 0;
     height: 1px;
     padding-top: 1px;
     background-color: white;
-    transition: width 0.3s ease;
+    transition: width 0.3s ease;  /* Transicao para o width aitngitr o seu tamanho, que por enquanto eh 0. */
 }
 
 .header .icones a::before {
     content: '';
-    position: absolute;
+    position: absolute; /* Como iremos posicionar ele + especificamente, de acordo com o posicionamento dele na tela*/
     bottom: 0;
     left: 0;
     width: 0;
@@ -92,7 +95,7 @@ img {
 }
 
 .header .linkss a:hover::before {
-    width: 100%;
+    width: 100%; /* Ao passar o mouse em cima, o width muda para 100% e executa o tempo de transition. */
 }
 
 .header .icones a:hover::before {
@@ -126,9 +129,9 @@ img {
     font-weight: bold;
 }
 
-
 .titulo a {
-    display: inline-block;
+    display: inline-block; /* Mantenho em uma linha horzintoal e ao mesmo tempo posso mudar seu tamanho sem problema*/
+    /* Como o elemnto eh exibido na tela */
     transition: transform 0.3s ease;
     transform-origin: 0 0;
 }
