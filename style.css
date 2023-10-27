@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 /* ORGANIZANDO O CSS */
 
@@ -133,7 +132,7 @@ img {
     display: inline-block; /* Mantenho em uma linha horzintoal e ao mesmo tempo posso mudar seu tamanho sem problema*/
     /* Como o elemnto eh exibido na tela */
     transition: transform 0.3s ease;
-    transform-origin: 0 0;
+    transform-origin: 0 0; /*ponto de origem da transformacao*/
 }
 
 .titulo a:hover {
