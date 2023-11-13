@@ -559,7 +559,7 @@ img {
 
 } 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     body { 
         padding-top: 240px; 
         width: 100%;
@@ -639,7 +639,7 @@ img {
 
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
     .header{
         position: fixed;
     }
