@@ -559,7 +559,7 @@ img {
 
 } 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) { 
     body { 
         padding-top: 240px; 
         width: 100%;
@@ -583,7 +583,7 @@ img {
     }
     
     .header {
-        height: 240px;
+        height: 220px;
     }
 
     .video{
@@ -638,6 +638,29 @@ img {
     }
 
 }
+
+@media screen and (max-width: 400px) { 
+    html {
+        font-size: x-small;
+    }
+
+    .video{
+        width: 60%;
+        padding-top: 20px;
+        border-radius: 8px; /* Adicione um valor de raio desejado para arredondar as bordas */
+    }
+    
+    .gmap{
+        width: 60%;
+        height: 500px;
+        border-radius: 8px; /* Adicione um valor de raio desejado para arredondar as bordas */
+    
+    }
+    
+    .header {
+        display: block;
+        height: 185px;
+    }
 
 @media screen and (min-width: 1000px) {
     .header{
