@@ -54,16 +54,16 @@
     </div>
 
     <!-- FOTOS EM LISTAS -->
-    <section class="fotos" id="fotos">
+    <!-- <section class="fotos" id="fotos">
         <section class="unidade1">
             <h1 class="terciary-text">Fotos:</h1>
             <p class="p-uni1">Unidade 1:</p>
             <div class="container-fotos">
                 <ul class="fotosuni1-list">
-                    <li><img src="ASSETS/IMG/frentera.png" class="fotosuni1" style="height: 443px;"></li>
-                    <li><img src="" class="fotosuni1"></li>
-                    <li><img src="" class="fotosuni1"></li>
-                    <li><img src="" class="fotosuni1"></li>
+                    <li><img src="   " class="fotosuni1" style="height: 443px;"></li>
+                    <li><img src="   " class="fotosuni1"></li>
+                    <li><img src="   " class="fotosuni1"></li>
+                    <li><img src="   " class="fotosuni1"></li>
                 </ul>
             </div>
         </section>
@@ -72,17 +72,31 @@
             <p class="p-uni2">Unidade 2:</p>
             <div class="container-fotos">
                 <ul class="fotosuni1-list">
-                    <li><img src="ASSETS/IMG/frentera2.png" class="fotosuni1" style="height: 443px;"></li>
-                    <li><img src="ASSETS/IMG/ACADEMIA UNIDADE 2 (1).jpeg" class="fotosuni1" ></li>
-                    <li><img src="ASSETS/IMG/ACADEMIA UNIDADE 2 (2).jpeg" class="fotosuni1"></li>
-                    <li><img src="ASSETS/IMG/ACADEMIA UNIDADE 2 (3).jpeg" class="fotosuni1"></li>
+                    <li><img src="   " class="fotosuni1" style="height: 443px;"></li>
+                    <li><img src="   " class="fotosuni1" ></li>
+                    <li><img src="   " class="fotosuni1"></li>
+                    <li><img src="   " class="fotosuni1"></li>
                 </ul>
             </div>
         </section>
-    </section> 
+    </section>  -->
 
-    <!-- INSTRUTORES -->
-    <section class="equipe-instrutores" id="instrutores"> <!-- SECTION Agrupar elementos relacionados entre-si -->
+    <div id="carousel-container" style="text-align: center; position: relative; z-index: 1;">
+        <div id="carousel-wrapper">
+            <div class="carousel-item"><img src="   " alt="Image 1"></div>
+            <div class="carousel-item"><img src="   " alt="Image 2"></div>
+            <div class="carousel-item"><img src="   " alt="Image 3"></div>
+            <!-- Adicione mais itens conforme necessário -->
+        </div>
+    
+        <div id="carousel-buttons">
+            <button id="prevBtn">Anterior</button>
+            <button id="nextBtn">Próximo</button>
+        </div>
+    </div>
+    
+     <!-- INSTRUTORES       
+    <section class="equipe-instrutores" id="instrutores"> SECTION Agrupar elementos relacionados entre-si 
         <h1 class="texto-horarios">Nossa Equipe de Instrutores</h1>
 
         <div class="instrutor">
@@ -92,7 +106,7 @@
                 <p>Posição: Instrutor Fisico</p>
                 <p>Local: Unidade 1</p>             
             </div>
-        </div>
+        </div> -->
 
     <!-- HORARIOS -->
     <h1 class="texto-horarios">Aulas <span style="font-size: larger;" id="horaios">UNIDADE 1</span></h1>
@@ -223,9 +237,118 @@
             <p class="nav">&copy; Thiago Luiz Fossa</p>
             <a class="nav" href="https://github.com/JONTK123" target="_blank">Acesse meu GitHub!</a>
         </div>
-        
-        
     </footer>
+    
+    <script>
+function fadeInPage(duration) {
+    // Obtém a referência do elemento body
+    const body = document.body;
+    
+    // Define a opacidade inicial como 0
+    body.style.opacity = 0;
+    
+    // Define o estilo de exibição como "block"
+    body.style.display = "block";
+
+    // Inicializa a variável startTime como nula
+    let startTime = null;
+
+    // Define a função de animação
+    function animate(time) {
+        // Se startTime for nulo, atribui o valor atual de time a startTime
+        if (!startTime) {
+            startTime = time;
+        }
+
+        // Calcula o progresso da animação
+        const progress = (time - startTime) / duration;
+
+        // Atualiza a opacidade do corpo para o valor mínimo entre progress e 1
+        body.style.opacity = Math.min(progress, 1);
+
+        // Se o progresso for menor que 1, continua a animação
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        }
+    }
+
+    // Inicia a animação chamando requestAnimationFrame
+    requestAnimationFrame(animate);
+}
+
+function fadeOutPage(duration) {
+    // Obtém a referência do elemento body
+    const body = document.body;
+
+    // Define a opacidade inicial como 1
+    body.style.opacity = 1;
+
+    // Inicializa a variável startTime como nula
+    let startTime = null;
+
+    // Define a função de animação
+    function animate(time) {
+        // Se startTime for nulo, atribui o valor atual de time a startTime
+        if (!startTime) {
+            startTime = time;
+        }
+
+        // Calcula o progresso da animação
+        const progress = (time - startTime) / duration;
+
+        // Atualiza a opacidade do corpo para 1 subtraído do mínimo entre progress e 1
+        body.style.opacity = 1 - Math.min(progress, 1);
+
+        // Se o progresso for menor que 1, continua a animação
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        } else {
+            // Quando a animação estiver concluída, define o estilo de exibição como "none"
+            body.style.display = "none";
+        }
+    }
+
+    // Inicia a animação chamando requestAnimationFrame
+    requestAnimationFrame(animate);
+}
+
+    // Exemplo de uso:
+    // Para fadeIn
+    fadeInPage(2000); // 2000 milissegundos = 2 segundos
+
+    // Para fadeOut
+    // fadeOutPage(1000); // 1000 milissegundos = 1 segundo
+    </script>
+
+<script>
+    
+const carouselWrapper = document.getElementById('carousel-wrapper');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+  
+    let currentIndex = 0;
+  
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < carouselWrapper.children.length - 1) {
+        currentIndex++;
+        updateCarousel();
+      }
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    });
+  
+    function updateCarousel() {
+      const newTransformValue = -currentIndex * 100 + '%';
+      carouselWrapper.style.transform = `translateX(${newTransformValue})`;
+    }
+
+  
+  </script>
 </body>
 </html>
 
