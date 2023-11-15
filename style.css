@@ -166,6 +166,57 @@ img {
 
 /* FOTOS */
 
+#carousel-container-2 {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #carousel-wrapper-2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-item-2 {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  #prevBtn-2 {
+    left: 20px;
+  }
+
+  #nextBtn-2 {
+    right: 20px;
+
+  }
+
+  #carousel-buttons-2 button {
+    background-color: #000000; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno (topo/baixo, esquerda/direita) */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+    margin: 0 650px; /* Margem entre os botões */
+    width: 120px;
+}
+
+#carousel-buttons-2 button:hover {
+    background-color: #ff0000; /* Cor de fundo ao passar o mouse */
+}
+
+/* ----------------------------------------------------------------------------------- */
+
 #carousel-container {
     width: 100%;
     overflow: hidden;
