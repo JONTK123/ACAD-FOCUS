@@ -151,7 +151,7 @@ img {
     justify-content: center;
 }
 
-.descricao {
+.descricao { 
     justify-content: center; 
     text-align: center;
 }
@@ -165,6 +165,10 @@ img {
 }
 
 /* FOTOS */
+
+#carousel-item {
+    width: 100px;
+}
 
 #carousel-container-2 {
     width: 100%;
@@ -207,7 +211,7 @@ img {
     border: none; /* Remove a borda */
     border-radius: 5px; /* Cantos arredondados */
     cursor: pointer; /* Altera o cursor ao passar por cima */
-    margin: 0 650px; /* Margem entre os botões */
+    margin: 0 1025px; /* Margem entre os botões */
     width: 120px;
 }
 
@@ -258,7 +262,7 @@ img {
     border: none; /* Remove a borda */
     border-radius: 5px; /* Cantos arredondados */
     cursor: pointer; /* Altera o cursor ao passar por cima */
-    margin: 0 650px; /* Margem entre os botões */
+    margin: 0 1025px; /* Margem entre os botões */
     width: 120px;
 }
 
@@ -695,6 +699,11 @@ img {
         font-size: x-small;
     }
 
+    body { 
+        padding-top: 160px; 
+        width: 100%;
+    } 
+
     .video{
         width: 60%;
         padding-top: 20px;
@@ -703,15 +712,62 @@ img {
     
     .gmap{
         width: 60%;
-        height: 500px;
         border-radius: 8px; /* Adicione um valor de raio desejado para arredondar as bordas */
     
     }
     
     .header {
         display: block;
-        height: 185px;
+        height: 160px;
     }
+
+    .fotos img,
+    .fotosuni1-list img,
+    .fotosuni1,
+    .fotosuni2 {
+        max-width: 100%; /* Defina a largura da imagem para 200px */
+        height: 200px;
+    }
+
+    .carousel-item img {
+        width: 300px;
+    }
+
+    .carousel-item-2 img {
+        width: 300px;
+    }
+
+    .musc1,
+    .musc2,
+    .aulas,
+    .pilates,
+    .ritmos,
+    .crosstraining,
+    .muay-thai,
+    .hiit,
+    .gap {
+        max-width: 200px; /* Defina a largura máxima conforme necessário */
+        max-height: 150px;
+    }
+
+    #carousel-buttons button {
+        margin: 150px 40px; /* Adicione margem acima e abaixo dos botões */
+        padding: 3px 5px; /* Ajuste o preenchimento conforme necessário */
+        width: auto;
+        font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+    }
+
+    #carousel-buttons-2 button {
+        margin: 165px 40px; /* Adicione margem acima e abaixo dos botões */
+        padding: 3px 5px; /* Ajuste o preenchimento conforme necessário */
+        width: auto;
+        font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+    }
+
+    .telefone-whatsapp a {
+        font-size: smaller;
+    }
+
 }
 
 @media screen and (min-width: 1000px) {
