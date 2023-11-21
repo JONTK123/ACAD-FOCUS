@@ -75,7 +75,6 @@ function updateCarousel() {
     carouselWrapper.style.transform = `translateX(${newTransformValue})`;
 }
 
-
 let currentIndex2 = 0;
 const items2 = document.querySelectorAll('.carousel-item-2');
 const totalItems2 = items2.length;
