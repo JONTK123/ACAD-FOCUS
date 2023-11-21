@@ -55,21 +55,26 @@ let currentIndex = 0;
 nextBtn.addEventListener('click', () => {
     if (currentIndex < carouselWrapper.children.length - 1) {
         currentIndex++;
-        updateCarousel();
+    } else {
+        currentIndex = 0; // Reset to the first item if at the last item
     }
+    updateCarousel();
 });
 
 prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
-        updateCarousel();
+    } else {
+        currentIndex = carouselWrapper.children.length - 1; // Go to the last item if at the first item
     }
+    updateCarousel();
 });
 
 function updateCarousel() {
     const newTransformValue = -currentIndex * 100 + '%';
     carouselWrapper.style.transform = `translateX(${newTransformValue})`;
 }
+
 
 let currentIndex2 = 0;
 const items2 = document.querySelectorAll('.carousel-item-2');
