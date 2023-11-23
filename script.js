@@ -1,27 +1,27 @@
 function fadeInPage(duration) {
-    const body = document.body;
-    body.style.opacity = 0;
-    body.style.display = "block";
-    let startTime = null;
+    const body = document.body; //Pega body do html e transforma em variavel JS
+    body.style.opacity = 0; //Deixca opacidade 0
+    body.style.display = "block"; //Deixa para ocupar toda a largura do navegador disponivel
+    let startTime = null; //Comeca o tempo do start como NULL
 
-    function animate(time) {
-        if (!startTime) {
-            startTime = time;
+    function animate(time) { //Cria uma funcao que faz animacao
+        if (!startTime) { //Se for vazio
+            startTime = time; //Atribui valor de time
         }
 
-        const progress = (time - startTime) / duration;
-        body.style.opacity = Math.min(progress, 1);
+        const progress = (time - startTime) / duration; //Calcula o tempo do progresso da animacao, tempo de progresso = tempo q demora para realizar animacao
+        body.style.opacity = Math.min(progress, 1); //Define o tamanho maximo da opacidade como 1 e o valor como o tempo da progressao
 
-        if (progress < 1) {
-            requestAnimationFrame(animate);
+        if (progress < 1) { //Se for menor ou igual a 1
+            requestAnimationFrame(animate); //Inicia um loop de 60x ( q eh 60 hz ) chamando a funcao animate. FAZ ISSO ATE ATINGIR 1, se parar antes de 60, tudo bem tb
         }
     }
 
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animate); // Inicia um loop de 60x ( q eh 60 hz ) chamando a funcao animate. Fora de loop pois ela quem vai iniciar esse processo
 }
 
 function fadeOutPage(duration) {
-    const body = document.body;
+    const body = document.body; 
     body.style.opacity = 1;
     let startTime = null;
 
@@ -34,7 +34,7 @@ function fadeOutPage(duration) {
         body.style.opacity = 1 - Math.min(progress, 1);
 
         if (progress < 1) {
-            requestAnimationFrame(animate);
+            requestAnimationFrame(animate); // Realiza 60x 60FPS a funcao animate
         } else {
             body.style.display = "none";
         }
