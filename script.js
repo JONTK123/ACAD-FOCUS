@@ -20,30 +20,31 @@ function fadeInPage(duration) {
     requestAnimationFrame(animate); // Inicia um loop de 60x ( q eh 60 hz ) chamando a funcao animate. Fora de loop pois ela quem vai iniciar esse processo
 }
 
-function fadeOutPage(duration) {
-    const body = document.body; 
-    body.style.opacity = 1;
-    let startTime = null;
-
-    function animate(time) {
-        if (!startTime) {
-            startTime = time;
-        }
-
-        const progress = (time - startTime) / duration;
-        body.style.opacity = 1 - Math.min(progress, 1);
-
-        if (progress < 1) {
-            requestAnimationFrame(animate); // Realiza 60x 60FPS a funcao animate
-        } else {
-            body.style.display = "none";
-        }
-    }
-
-    requestAnimationFrame(animate);
-}
-
 fadeInPage(2000); // 2000 milissegundos = 2 segundos
+
+// function fadeOutPage(duration) {
+//     const body = document.body; 
+//     body.style.opacity = 1;
+//     let startTime = null;
+
+//     function animate(time) {
+//         if (!startTime) {
+//             startTime = time;
+//         }
+
+//         const progress = (time - startTime) / duration;
+//         body.style.opacity = 1 - Math.min(progress, 1);
+
+//         if (progress < 1) {
+//             requestAnimationFrame(animate); // Realiza 60x 60FPS a funcao animate
+//         } else {
+//             body.style.display = "none";
+//         }
+//     }
+
+//     requestAnimationFrame(animate);
+// }
+
 // fadeOutPage(1000); // 1000 milissegundos = 1 segundo
 
 const carouselWrapper = document.getElementById('carousel-wrapper');
@@ -53,26 +54,48 @@ const nextBtn = document.getElementById('nextBtn');
 let currentIndex = 0;
 
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < carouselWrapper.children.length - 1) {
-        currentIndex++;
+    if (currentIndex < carouselWrapper.children.length - 1) { //Percorre as divs filhas de carousel-wrapper, ate o penultimo
+        currentIndex++; //Se for maior q penultimo, ele volta pro zero ( comeco )
     } else {
-        currentIndex = 0; // Reset to the first item if at the last item
+        currentIndex = 0; // Reset to the first item if at the last item VAI PRO COMECO
     }
     updateCarousel();
 });
+
+// OU pode ser efeito assim
+
+// nextBtn.onclick = function() {
+//     if (currentIndex < carouselWrapper.children.length - 1) {
+//         currentIndex++;
+//     } else {
+//         currentIndex = 0;
+//     }
+//     updateCarousel();
+// };
+
+// OU pode ser feito assim, mas mudar o HTML para chamar a funcao ao clicar
+
+// function nextSlide() {
+//     if (currentIndex < carouselWrapper.children.length - 1) {
+//         currentIndex++;
+//     } else {
+//         currentIndex = 0;
+//     }
+//     updateCarousel();
+// }
 
 prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
+    if (currentIndex > 0) { //Percorre as divs filhas de carousel-wrapper, o primeiro
+        currentIndex--; //Se for maior q o primeiro, ele volta pro ultimo ( comeco )
     } else {
-        currentIndex = carouselWrapper.children.length - 1; // Go to the last item if at the first item
+        currentIndex = carouselWrapper.children.length - 1; // Go to the last item if at the first item VAI PRO COMECO
     }
     updateCarousel();
 });
 
-function updateCarousel() {
-    const newTransformValue = -currentIndex * 100 + '%';
-    carouselWrapper.style.transform = `translateX(${newTransformValue})`;
+function updateCarousel() { //Como de fato a imagem muda
+    const newTransformValue = -currentIndex * 100 + '%'; //Pega a posicao atual * 100 para dar porcetagem.
+    carouselWrapper.style.transform = `translateX(${newTransformValue})`; //Transforma o style de wrapper com o translateX ( mudar horizontalmente com o valor calculado da posicao atual)
 }
 
 let currentIndex2 = 0;
