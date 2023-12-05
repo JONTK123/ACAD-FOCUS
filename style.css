@@ -391,6 +391,10 @@ img {
 .p-vid{
     text-decoration: underline;
     text-underline-offset: 4px; /* Ajuste o valor conforme desejado */
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 .div-video{
     justify-content: center; 
