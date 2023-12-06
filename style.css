@@ -657,7 +657,7 @@ img {
 
 @media screen and (max-width: 1000px) { 
     body { 
-        padding-top: 190px; 
+        padding-top: 210px; 
         width: 100%;
     } 
 
@@ -679,7 +679,7 @@ img {
     }
     
     .header {
-        height: 190px;
+        height: 210px;
     }
 
     .video{
@@ -749,13 +749,13 @@ img {
 
 }
 
-@media screen and (max-width: 400px) { 
+@media screen and (max-width: 450px) { 
     html {
         font-size: x-small;
     }
 
     body { 
-        padding-top: 160px; 
+        padding-top: 170px; 
         width: 100%;
     } 
 
@@ -773,7 +773,7 @@ img {
     
     .header {
         display: block;
-        height: 160px;
+        height: 170px;
     }
 
     .carousel-item img {
